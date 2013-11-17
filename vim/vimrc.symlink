@@ -1,0 +1,16 @@
+execute pathogen#infect()
+set ts=4
+set expandtab
+syntax enable
+
+" Use solarized colorscheme
+set background=dark
+colorscheme solarized
+
+" For lightline
+set laststatus=2
+
+" Force 256 color term
+if !has('gui_running')
+  set t_Co=256
+endif
