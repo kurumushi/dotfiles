@@ -4,7 +4,9 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export LSCOLORS="exfxcxdxbxegedabagacad"
+eval `dircolors $ZSH/zsh/dircolors.256dark`
+#export LSCOLORS="exfxcxdxbxegedabagacad"
+
 export CLICOLOR=true
 
 fpath=($ZSH/functions $fpath)
@@ -37,12 +39,8 @@ setopt HIST_REDUCE_BLANKS
 #   like: git comm-[tab]
 setopt complete_aliases
 
-zle -N newtab
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[OH' beginning-of-line
+bindkey '^[OF' end-of-line
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
