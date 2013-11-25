@@ -1,6 +1,7 @@
 execute pathogen#infect()
 set ts=4
 set expandtab
+set sts=4
 syntax enable
 
 " Use solarized colorscheme
