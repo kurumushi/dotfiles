@@ -39,8 +39,11 @@ setopt HIST_REDUCE_BLANKS
 #   like: git comm-[tab]
 setopt complete_aliases
 
+# Interferes with portage package atoms on the command line
+unsetopt EQUALS
+
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 bindkey '^[OH' beginning-of-line
 bindkey '^[OF' end-of-line
-
+bindkey '^[[3~' delete-char
