@@ -1,0 +1,26 @@
+export DOTFILES=$HOME/.dotfiles
+
+# Non public stuff
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our zsh files
+path_files=`find $DOTFILES/* -type f -name path.bash`
+config_files=`find $DOTFILES/* -type f -name \*.bash -not -name path.bash`
+
+# load the path files
+for file in ${path_files}
+do
+  source $file
+done
+
+# load everything but the path and completion files
+for file in ${config_files}
+do
+  source $file
+done
+
+unset path_files
+unset config_files
