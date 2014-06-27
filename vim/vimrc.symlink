@@ -4,10 +4,6 @@ set expandtab
 set sts=4
 syntax enable
 
-" Use solarized colorscheme
-set background=dark
-colorscheme solarized
-
 " For lightline
 set laststatus=2
 
