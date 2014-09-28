@@ -1,10 +1,7 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Non public stuff
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
+[[ -a ~/.localrc ]] && source ~/.localrc
 
 # all of our zsh files
 path_files=`find $DOTFILES/* -type f -name path.bash`
@@ -24,3 +21,5 @@ done
 
 unset path_files
 unset config_files
+
+# vim: syntax=sh
