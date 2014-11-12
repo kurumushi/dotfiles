@@ -4,3 +4,6 @@
 [submodule "vim/vim.symlink/bundle/lightline.vim"]
 	path = vim/vim.symlink/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim/vim.symlink/bundle/Zenburn"]
+	path = vim/vim.symlink/bundle/Zenburn
+	url = https://github.com/jnurmine/Zenburn
